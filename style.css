@@ -318,9 +318,9 @@ footer {
 }
 
 @media screen and (min-width:1400px) {
-    body {
+    /* body {
         font-size: 30px;
-    }
+    } */
 
     span.intro-text {
         font-size: 25px;
