@@ -142,6 +142,7 @@ h2 {
     align-items: center;
     text-align: center;
     align-content: center;
+    gap: 1.5em;
 }
 
 /* ---For sections with subsections, need to adjust flex so that when there is wrap, subsections do not break and wrap---- */
@@ -318,9 +319,9 @@ footer {
 }
 
 @media screen and (min-width:1400px) {
-    body {
+    /* body {
         font-size: 30px;
-    }
+    } */
 
     span.intro-text {
         font-size: 25px;
