@@ -77,7 +77,7 @@ a {
     margin: 0.5rem;
     padding: 0.5rem 2rem;
     /* border: solid 1px; */
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 
@@ -90,27 +90,16 @@ a {
     background: rgb(2, 0, 36);
     background: linear-gradient(127deg, rgba(2, 0, 36, 1) 0%, rgba(3, 38, 72, 1) 10%, rgb(164, 66, 125, 1) 100%);
     border-radius: 50%;
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     margin-bottom: 1rem;
 }
 
-span.intro-text {
-    font-size: 20px;
-    font-weight: 300;
-    height: 2.5rem;
-    padding: 1px;
-    border-radius: 20px;
-    background: linear-gradient(127deg, rgba(2, 0, 36, 1) 0%, rgba(3, 38, 72, 1) 10%, rgb(164, 66, 125, 1) 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.section-text {
+
+/* .section-text {
     width: 300px;
-}
+} */
 
 .list-group {
     margin: 1rem 0;
@@ -132,21 +121,42 @@ h2 {
     opacity: 1;
 }
 
+span.intro-text {
+    font-size: 20px;
+    font-weight: 300;
+    height: 2.5rem;
+    padding: 1px;
+    border-radius: 20px;
+    background: linear-gradient(127deg, rgba(2, 0, 36, 1) 0%, rgba(3, 38, 72, 1) 10%, rgb(164, 66, 125, 1) 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin: auto;
+}
+
 .section-page,
 .section,
 .sub-sections-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
     text-align: center;
-    align-content: center;
-    gap: 1.5em;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-page {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* gap: 8em; */
 }
 
 /* ---For sections with subsections, need to adjust flex so that when there is wrap, subsections do not break and wrap---- */
-@media screen and (max-width:576px) {
+@media screen and (max-width:600px) {
 
     .sub-sections-box {
         display: flex;
@@ -202,11 +212,16 @@ section {
     margin: 4px 2px;
 }
 
+
+/* --------------------PROJECTS------------------- */
+
+
 .project-previews {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
+    /* gap: 1em; */
+    align-items: center;
     /* flex-direction: column; */
 }
 
@@ -219,11 +234,13 @@ section {
 .project-preview>figcaption {
     cursor: pointer;
     color: #2c5f6f;
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 .project-img {
-    width: 10em;
-    height: 10em;
+    width: 30em;
+    height: 30em;
     margin: 4px 2px;
     border-radius: 5%;
     filter: brightness(100%);
@@ -236,11 +253,25 @@ section {
     ;
 }
 
+.features-list {
+    max-width: 600px;
+    text-align: left;
+}
+
+.features-item {
+    margin-top: 1rem;
+}
+
 .icon {
     color: rgb(164, 66, 125);
     text-decoration: none;
     display: block;
     margin: 1rem;
+}
+
+.hint-clickable {
+    font-size: 1rem;
+    font-style: italic;
 }
 
 
@@ -249,11 +280,11 @@ section {
 
 .carousel-control-next,
 .carousel-control-prev {
-    width: 5%;
+    width: 8%;
 }
 
 .carousel-control-next {
-    right: 1px;
+    right: 0px;
 }
 
 .arrow-icon {
@@ -282,19 +313,27 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 
     .project-img {
-        width: 8em;
-        height: 8em;
+        width: 15em;
+        height: 15em;
     }
 
     .project-preview>figcaption {
-        font-size: 0.8em;
+        font-size: 1.2em;
+    }
+
+    .features-list {
+        font-size: 1rem;
+    }
+
+    .features-item {
+        margin: 0;
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 720px) {
 
     #avatar {
         width: 30rem;
@@ -314,6 +353,14 @@ footer {
 
     .arrow-icon {
         font-size: 4rem;
+    }
+
+    #contact>div>p>a {
+        font-size: 1.5rem;
+    }
+
+    .section-text {
+        width: 500px;
     }
 
 }
@@ -342,7 +389,4 @@ footer {
         font-size: 2rem;
     }
 
-    .section-text {
-        width: 500px;
-    }
 }
