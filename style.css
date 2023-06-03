@@ -250,12 +250,14 @@ section {
 .project-preview:hover {
     transform: scale(1.1);
     color: rgb(164, 66, 125);
-    ;
 }
 
 .features-list {
     max-width: 600px;
+    height: 20em;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .features-item {
@@ -272,6 +274,28 @@ section {
 .hint-clickable {
     font-size: 1rem;
     font-style: italic;
+}
+
+@media screen and (max-width:1000px) {
+
+    .project-previews {
+        flex-direction: column;
+    }
+
+    .project-img {
+        width: 25em;
+        height: 25em;
+    }
+
+    .features-list {
+        height: 15em;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .features-item {
+        margin-top: 0.2rem;
+    }
 }
 
 
